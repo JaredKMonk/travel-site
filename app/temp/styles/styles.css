@@ -440,11 +440,11 @@ a {
 }
 
 .large-hero {
-    border-bottom: 10px solid #2f5572;
-    position: relative;
+  border-bottom: 10px solid #2f5572;
+  position: relative;
 }
 
-.large-hero__image{
+.large-hero__image {
   display: block;
 }
 
@@ -503,11 +503,11 @@ a {
 }
 
 .btn {
-    background-color: #2f5572;
-    color: #FFF;
-    text-decoration: none;
-    padding: .75rem 1.2rem;
-    display: inline-block;
+  background-color: #2f5572;
+  color: #FFF;
+  text-decoration: none;
+  padding: .75rem 1.2rem;
+  display: inline-block;
 }
 
 .btn--orange {
@@ -526,16 +526,29 @@ a {
 }
 
 .wrapper {
-    overflow: hidden;
-    padding-left: 18px;
-    padding-right: 18px;
-    max-width: 1236px;
-    margin-left: auto;
-    margin-right: auto;
+  overflow: hidden;
+  padding-left: 18px;
+  padding-right: 18px;
+  max-width: 1236px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .wrapper--medium {
   max-width: 976px;
+}
+
+.wrapper--no-padding-until-medium {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 800px) {
+
+  .wrapper--no-padding-until-medium {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
 
 .wrapper .wrapper {
@@ -555,8 +568,7 @@ a {
 }
 
 .page-section {
-
-    padding: 1.2rem 0;
+  padding: 1.2rem 0;
 }
 
 @media (min-width: 800px) {
@@ -566,20 +578,38 @@ a {
   }
 }
 
+.page-section--no-b-padding-until-medium{
+  padding-bottom: 0;
+}
+
+@media (min-width: 800px) {
+
+  .page-section--no-b-padding-until-medium {
+    padding-bottom: 4.5rem;
+  }
+}
+
 .page-section--blue {
   background-color: #2f5572;
   color: #FFF;
 }
 
 .page-section--testimonials {
-  background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
-  background-size: cover;
+  background-color: #e0e6ef;
+}
+
+@media (min-width: 800px) {
+
+  .page-section--testimonials {
+    background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+    background-size: cover;
+  }
 }
 
 .headline {
-    font-size: 1.9rem;
-    font-weight: 300;
-    color: #2f5572;
+  font-size: 1.9rem;
+  font-weight: 300;
+  color: #2f5572;
 }
 
 @media (min-width: 530px) {
@@ -636,6 +666,10 @@ a {
   display: table;
 }
 
+.row--t-padding{
+  padding-top: 80px;
+}
+
 .row--gutters {
   margin-right: -65px;
 }
@@ -644,12 +678,20 @@ a {
   margin-right:  -100px;
 }
 
+.row--gutters-small{
+  margin-right: -45px;
+}
+
 .row--gutters > div {
   padding-right: 65px;
 }
 
 .row--gutters-large > div{
   padding-right: 100px;
+}
+
+.row--gutters-small > div{
+  padding-right: 45px;
 }
 
 .row__b-margin-until-medium {
@@ -686,10 +728,26 @@ a {
   }
 }
 
+/*Begin Equal Height Rules*/
+
+@media (min-width: 800px) {
+
+  .row--equal-height-at-medium {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.row--equal-height-at-medium > div{
+  float: none;
+  display:-ms-flexbox;
+  display:flex;
+}
+
 .generic-content-container p {
   font-weight: 300;
   line-height: 1.65;
-  margin:0 0 1.8rem 0;
+  margin: 0 0 1.8rem 0;
 }
 
 @media (min-width: 530px) {
@@ -704,9 +762,9 @@ a {
 }
 
 .section-title {
-    font-size: 2.55rem;
-    font-weight: 300;
-    text-align: center;
+  font-size: 2.55rem;
+  font-weight: 300;
+  text-align: center;
 }
 
 @media (min-width: 530px) {
@@ -720,7 +778,7 @@ a {
   font-weight: 500;
 }
 
-.section-title--blue{
+.section-title--blue {
   color: #2f5572;
 }
 
@@ -744,8 +802,8 @@ a {
 }
 
 .feature-item {
-    position: relative;
-    padding-bottom: 2.5rem;
+  position: relative;
+  padding-bottom: 2.5rem;
 }
 
 @media (min-width: 530px) {
@@ -786,11 +844,24 @@ a {
 }
 
 .testimonial {
-    background-color: rgba(255,255,255, .8);
-    padding: 0 1.8125rem 1px 1.8125rem;
+  background-color: rgba(255, 255, 255, .8);
+  padding: 0 18px 1px 18px;
+  margin-bottom: 98px;
 }
 
-.testimonial__photo{
+@media (min-width: 800px) {
+
+  .testimonial {
+    margin-bottom: 0;
+    padding: 0 1.8125rem 1px 1.8125rem;
+  }
+}
+
+.testimonial--last{
+  margin-bottom: 0;
+}
+
+.testimonial__photo {
   border-radius: 80px;
   overflow: hidden;
   width: 160px;
@@ -798,7 +869,7 @@ a {
   margin: 0 auto -80px auto;
   position: relative;
   top: -80px;
-  border: 6px solid rgba(255,255,255,.8);
+  border: 6px solid rgba(255, 255, 255, .8);
 }
 
 .testimonial__title {
