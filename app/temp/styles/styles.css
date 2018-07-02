@@ -551,6 +551,19 @@ a {
   }
 }
 
+.wrapper--no-padding-until-large {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 1010px) {
+
+  .wrapper--no-padding-until-large {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
 .wrapper .wrapper {
   padding-left: 0;
   padding-right: 0;
@@ -571,20 +584,31 @@ a {
   padding: 1.2rem 0;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1010px) {
 
   .page-section {
     padding: 4.5rem 0;
   }
 }
 
-.page-section--no-b-padding-until-medium{
+.page-section--no-b-padding-until-medium {
   padding-bottom: 0;
 }
 
 @media (min-width: 800px) {
 
   .page-section--no-b-padding-until-medium {
+    padding-bottom: 4.5rem;
+  }
+}
+
+.page-section--no-b-padding-until-large {
+  padding-bottom: 0;
+}
+
+@media (min-width: 1010px) {
+
+  .page-section--no-b-padding-until-large {
     padding-bottom: 4.5rem;
   }
 }
@@ -666,7 +690,7 @@ a {
   display: table;
 }
 
-.row--t-padding{
+.row--t-padding {
   padding-top: 80px;
 }
 
@@ -674,23 +698,23 @@ a {
   margin-right: -65px;
 }
 
-.row--gutters-large{
-  margin-right:  -100px;
+.row--gutters-large {
+  margin-right: -100px;
 }
 
-.row--gutters-small{
+.row--gutters-small {
   margin-right: -45px;
 }
 
-.row--gutters > div {
+.row--gutters>div {
   padding-right: 65px;
 }
 
-.row--gutters-large > div{
+.row--gutters-large>div {
   padding-right: 100px;
 }
 
-.row--gutters-small > div{
+.row--gutters-small>div {
   padding-right: 45px;
 }
 
@@ -728,6 +752,36 @@ a {
   }
 }
 
+@media (min-width: 1010px) {
+
+  .row__b-margin-until-medium {
+    margin-bottom: 0;
+  }
+
+  .row__large-4 {
+    float: left;
+    width: 33.33%;
+  }
+
+  .row__large-4--larger {
+    width: 37%;
+  }
+
+  .row__large-6 {
+    float: left;
+    width: 50%;
+  }
+
+  .row__large-8 {
+    float: left;
+    width: 66.66%;
+  }
+
+  .row__large-8--smaller {
+    width: 63%;
+  }
+}
+
 /*Begin Equal Height Rules*/
 
 @media (min-width: 800px) {
@@ -738,10 +792,24 @@ a {
   }
 }
 
-.row--equal-height-at-medium > div{
+.row--equal-height-at-medium>div {
   float: none;
-  display:-ms-flexbox;
-  display:flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 1010px) {
+
+  .row--equal-height-at-large {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.row--equal-height-at-large>div {
+  float: none;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .generic-content-container p {
@@ -849,7 +917,7 @@ a {
   margin-bottom: 98px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1010px) {
 
   .testimonial {
     margin-bottom: 0;
